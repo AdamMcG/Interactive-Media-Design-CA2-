@@ -16,23 +16,27 @@
             border: 2px solid black;
         }
 
-        .TextFont {
-            font-family: 'Franklin Gothic Medium';
-            font-size: larger;
+        .pull-left {
+            border: double 5px black;
+            height: 500px;
         }
     </style>
 </head>
 <body>
     <nav class="navbar navbar-inverse">
         <ul class=" nav nav-pills nav-justified">
-            <li role="presentation"><a class="TextFont" href="Home.html">Home</a></li>
-            <li role="presentation"><a class="TextFont" href="CV.html"> CV</a></li>
-            <li role="presentation"><a class="TextFont" href="Projects.html">Projects</a></li>
-            <li role="presentation"><a class="TextFont" href="Hobbies.html">Hobbies</a></li>
-            <li role="presentation"><a class="TextFont" href="Experience.html">Experience</a></li>
+            <li role="presentation"><a href="Home.html">Home</a></li>
+            <li role="presentation"><a href="CV.html"> CV</a></li>
+            <li role="presentation"><a href="Projects.html">Projects</a></li>
+            <li role="presentation"><a href="Hobbies.html">Hobbies</a></li>
+            <li role="presentation"><a href="Experience.html">Experience</a></li>
         </ul>
     </nav>
-
     <h1>This is the Experience Page</h1>
+
+    <div class="pull-left container-fluid">
+        <h1>sidebar goes here</h1>
+    </div>
+    <div class="container-fluid"><h1>The Main Page Content Goes here</h1></div>
 </body>
 </html>
