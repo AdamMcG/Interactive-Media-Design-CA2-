@@ -4,24 +4,11 @@
     <title>Adam McGivern's Home</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="Content\bootstrap.min.css" rel="stylesheet">
-    <script src="Scripts/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 
     <style>
-        .col-sm-4 {
-            height: 100px;
-            background-color: orange;
-            color: black;
-            text-align: center;
-            border: 2px solid black;
-        }
-
-        .pull-left {
-            border: double 5px black;
-            height:500px;
-        }
-
-     
     </style>
 </head>
 <body>
@@ -35,10 +22,20 @@
         </ul>
     </nav>
     <h1>This is the Hobbies Page</h1>
-
-    <div class="pull-left container-fluid">
+    <div class="pull-left container- fluid">
         <h1>sidebar goes here</h1>
-    </div>
-    <div class="container-fluid"><h1>The Main Page Content Goes here</h1></div>
+        <ul class="nav nav-pills nav-divider">
+            <li class="active"><a data-toggle="pill" href="#home">fgrgr</a></li>
+            <li><a data-toggle="pill" href="#test">1222</a></li>
+        </ul>
+        </div>
+        <div class="tab-content">
+            <div id="home" class="tab-pane fade in active">
+                <h1>Testing 123 testing. </h1>
+            </div>
+            <div id="test" class="tab-pane fade">
+                <h2>testing 1234544</h2>
+            </div>
+        </div>
 </body>
 </html>
