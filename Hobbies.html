@@ -8,34 +8,122 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 
+
+
     <style>
+        .navbar {
+            margin-bottom: 0;
+        }
+
+        .nav-stacked {
+            width: 300px;
+            height: 100vh;
+            margin-left: 0;
+        }
+
+        .jumbotron {
+            background-color: greenyellow;
+            margin-top: 0;
+            margin-bottom: 2px;
+        }
+
+        .btn.collapse {
+            width: 0;
+        }
+
+        .btn {
+            background: transparent;
+        }
+
+        .mybtnMargn {
+            margin-right: 20px;
+            height: 30vh;
+        }
     </style>
 </head>
 <body>
     <nav class="navbar navbar-inverse">
         <ul class=" nav nav-pills nav-justified">
+            <li class="navbar-brand" role="presentation"> ADAM MCGIVERN </li>
             <li role="presentation"><a href="Home.html">Home</a></li>
             <li role="presentation"><a href="CV.html"> CV</a></li>
             <li role="presentation"><a href="Projects.html">Projects</a></li>
             <li role="presentation"><a href="Hobbies.html">Hobbies</a></li>
             <li role="presentation"><a href="Experience.html">Experience</a></li>
+            <li role="presentation"><a> Search <span class="glyphicon glyphicon-search"></span></a></li>
         </ul>
     </nav>
-    <h1>This is the Hobbies Page</h1>
-    <div class="pull-left container- fluid">
-        <h1>sidebar goes here</h1>
-        <ul class="nav nav-pills nav-divider">
-            <li class="active"><a data-toggle="pill" href="#home">fgrgr</a></li>
-            <li><a data-toggle="pill" href="#test">1222</a></li>
-        </ul>
+    <div id="demo">
+        <div class="container-fluid jumbotron collapse in active">
+            <div class="row">
+                <div class="col-xs-6 col-md-3">
+                    <a href="#" class="thumbnail">
+                        <img src="http://www.kerry-beaches.com/images/contact-me-facebook-thumbnail.jpeg" alt="...">
+                    </a>
+                </div>
+                <h1> Adam McGivern</h1>
+                <div>
+                    <button type="button" class="btn-info">Default</button>
+                    <h1>
+                        Honours Bach. Computing
+
+                    </h1>
+                </div>
+            </div>
         </div>
-        <div class="tab-content">
+    </div>
+    <button type="button" id="clickBtn" data-toggle="collapse" data-target="#demo" class="collapsJumbo btn btn-group-justified">
+        <span class="glyphicon glyphicon-arrow-down"></span>
+        <script>
+        $('#clickBtn').click(function() {
+            $(this).find('span').toggleClass('glyphicon-arrow-up').toggleClass('glyphicon-arrow-down');
+        });
+        </script>
+    </button>
+    <div class="container-fluid ">
+        <div class="pull-left">
+            <div class="pull-left">
+                <ul class="nav nav-pills nav-stacked collapse in active" id="side">
+                    <li class="active"><a data-toggle="pill" href="#home">fgrgr</a></li>
+                    <li class="nav-justified"><a data-toggle="pill" href="#test">Technical</a></li>
+                    <li><a data-toggle="pill" href="#test">Academic</a></li>
+                    <li><a data-toggle="pill" href="#test">Athletic</a></li>
+                    <li><a data-toggle="pill" href="#test">Other</a></li>
+                </ul>
+            </div>
+            <button type="button" id="clickBtn2" data-toggle="collapse" data-target="#side" class=" mybtnMargn btn pull-left">
+                <span class="glyphicon glyphicon-arrow-left"></span>
+                <script>
+                    $('#clickBtn2').click(function() {
+                        $(this).find('span').toggleClass('glyphicon-arrow-left').toggleClass('glyphicon-arrow-right');
+                    });
+                </script>
+            </button>
+        </div>
+
+        <div class=" tab-content">
             <div id="home" class="tab-pane fade in active">
                 <h1>Testing 123 testing. </h1>
             </div>
-            <div id="test" class="tab-pane fade">
-                <h2>testing 1234544</h2>
+            <div id="test" class="tab-pane fade in active">
+                <p>
+                    data-toggle="collapse"d data-toggle="collapse"data-toggle="collapse"data-toggle="collapse"data-toggle="collapse"data-toggle="collapse"data-toggle="collapse"
+                    data-toggle="collapse"data-toggle="collapse"data-toggle="collapse"data-toggle="collapse"data-toggle
+                    ="collapse"data-toggle="collapse"data-toggle="collapse"data-toggle="collapse"data-toggle="collapse"data-toggle=
+                    "collapse"data-toggle="collapse"data-toggle="collapse"data-toggle="collapse"data-toggle="collapse"data-toggle="collapse"
+                    data-toggle="collapse"data-toggle="collapse"data-toggle="collapse"data-toggle="collapse"data-toggle="collapse"data-toggle="collapse"data-toggle
+                    data-toggle="collapse"data-toggle="collapse"data-toggle="collapse"data-toggle="collapse"data-toggle="collapse"data-toggle="collapse"data-toggle
+                    data-toggle="collapse"d data-toggle="collapse"data-toggle="collapse"data-toggle="collapse"data-toggle="collapse"data-toggle="collapse"data-toggle="collapse"
+                    data-toggle="collapse"data-toggle="collapse"data-toggle="collapse"data-toggle="collapse"data-toggle
+                    ="collapse"data-toggle="collapse"data-toggle="collapse"data-toggle="collapse"data-toggle="collapse"data-toggle=
+                    "collapse"data-toggle="collapse"data-toggle="collapse"data-toggle="collapse"data-toggle="collapse"data-toggle="collapse"
+                    data-toggle="collapse"data-toggle="collapse"data-toggle="collapse"data-toggle="collapse"data-toggle="collapse"data-toggle="collapse"data-toggle
+                    data-toggle="collapse"data-toggle="collapse"data-toggle="collapse"data-toggle="collapse"data-toggle="collapse"data-toggle="collapse"data-toggle
+
+                </p>
             </div>
         </div>
+    </div>
+
 </body>
 </html>
