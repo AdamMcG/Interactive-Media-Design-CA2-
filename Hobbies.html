@@ -11,18 +11,44 @@
 
 
     <style>
+        .collapsJumbo {
+        }
+
+        body {
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: large;
+            padding-top: 50px;
+        }
+
+        @media (max-width: 979px) {
+            body {
+                padding-top: 0px;
+            }
+        }
+
         .navbar {
             margin-bottom: 0;
         }
 
+
+        .collapse.width {
+            height: auto;
+            -webkit-transition: width 0.35s ease;
+            -moz-transition: width 0.35s ease;
+            -o-transition: width 0.35s ease;
+            transition: width 0.35s ease;
+        }
+
         .nav-stacked {
-            width: 300px;
-            height: 100vh;
+            background-color: palevioletred;
+            width: 200px;
             margin-left: 0;
         }
 
         .jumbotron {
             background-color: greenyellow;
+            background: rgb(200, 54, 54); /* This is for ie8 and below */
+            background: rgba(200, 54, 54, 0.5);
             margin-top: 0;
             margin-bottom: 2px;
         }
@@ -35,15 +61,19 @@
             background: transparent;
         }
 
-        .mybtnMargn {
-            margin-right: 20px;
-            margin-bottom: 100vh;
-            height: 30vh;
+        .SideBarContent {
+            width: 200px;
+            height: 100vh;
+        }
+
+        .tab-content {
+            padding-right: 30px;
+            border: solid 2px blue;
         }
     </style>
 </head>
 <body>
-    <nav class="navbar navbar-inverse">
+    <nav class="navbar navbar-inverse navbar-fixed-top">
         <ul class=" nav nav-pills nav-justified">
             <li class="navbar-brand" role="presentation"> ADAM MCGIVERN </li>
             <li role="presentation"><a href="Home.html">Home</a></li>
@@ -51,61 +81,84 @@
             <li role="presentation"><a href="Projects.html">Projects</a></li>
             <li role="presentation"><a href="Hobbies.html">Hobbies</a></li>
             <li role="presentation"><a href="Experience.html">Experience</a></li>
-            <li role="presentation"><a> Search <span class="glyphicon glyphicon-search"></span></a></li>
+            <li role="presentation"><a href="#myModal" data-toggle="modal">Contact Me</a></li>
+            <li role="presentation"><a href="#search" data-toggle="collapse"> Search <span class="glyphicon glyphicon-search"></span></a></li>
         </ul>
     </nav>
-<div id="Top Hero Content">
-    <div id="demo" class="container-fluid collapse in active">
-        <div class="jumbotron">
-            <div class="row">
-                <div class="col-xs-6 col-md-3">
-                    <a href="#" class="thumbnail">
-                        <img src="http://www.kerry-beaches.com/images/contact-me-facebook-thumbnail.jpeg" alt="...">
-                    </a>
+    <div id="Top Hero Content">
+        <div id="demo" class="container-fluid collapse in active">
+            <div class="jumbotron">
+                <div class="row">
+                    <div class="col-xs-6 col-md-3">
+                        <a href="#" class="thumbnail">
+                            <img src="http://sourcefed.com/wp-content/uploads/2012/10/twitter-for-ios-app-thumbnail.jpg" alt="...">
+                        </a>
+                    </div>
+                    <h1> Adam McGivern</h1>
+                    <div>
+                        <h1 class="text-center">
+                            Honours Bach. Computing
+                        </h1>
+                    </div>
                 </div>
-                <h1> Adam McGivern</h1>
-                <div>
-                    <button type="button" class="btn-info">Default</button>
-                    <h1>
-                        Honours Bach. Computing
+            </div>
+        </div>
+        <button type="button" id="clickBtn" data-toggle="collapse" data-target="#demo" class="collapsJumbo btn btn-group-justified">
+            <span class="glyphicon glyphicon-arrow-down"></span>
+            <script>
+                $('#clickBtn').click(function () {
+                    $(this).find('span').toggleClass('glyphicon-arrow-up').toggleClass('glyphicon-arrow-down');
+                });
+                $('.collapse').click(function (e) {
+                    e.preventDefault();
+                    e.stopPropagation();
 
-                    </h1>
+                    return false;
+                });
+            </script>
+        </button>
+
+
+        <div id="myModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                        <h3 id="myModalLabel">We'd Love to Hear From You</h3>
+                    </div>
+                    <div class="modal-body">
+                        <form class="form-horizontal col-sm-12">
+                            <div class="form-group"><label>Name</label><input class="form-control required" placeholder="Your name" data-placement="top" data-trigger="manual" data-content="Must be at least 3 characters long, and must only contain letters." type="text"></div>
+                            <div class="form-group"><label>Message</label><textarea class="form-control" placeholder="Your message here.." data-placement="top" data-trigger="manual"></textarea></div>
+                            <div class="form-group"><label>E-Mail</label><input class="form-control email" placeholder="email@you.com (so that we can contact you)" data-placement="top" data-trigger="manual" data-content="Must be a valid e-mail address (user@gmail.com)" type="text"></div>
+                            <div class="form-group"><label>Phone</label><input class="form-control phone" placeholder="999-999-9999" data-placement="top" data-trigger="manual" data-content="Must be a valid phone number (999-999-9999)" type="text"></div>
+                            <div class="form-group"><button type="submit" class="btn btn-success pull-right">Send It!</button> <p class="help-block pull-left text-danger hide" id="form-error">&nbsp; The form is not valid. </p></div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn" data-dismiss="modal" aria-hidden="true">Cancel</button>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-    <button type="button" id="clickBtn" data-toggle="collapse" data-target="#demo" class="collapsJumbo btn btn-group-justified">
-        <span class="glyphicon glyphicon-arrow-down"></span>
-        <script>
-            $('#clickBtn').click(function() {
-                $(this).find('span').toggleClass('glyphicon-arrow-up').toggleClass('glyphicon-arrow-down');
-            });
-            $('.collapse').click(function(e) {
-                e.preventDefault();
-                e.stopPropagation();
-
-                return false;
-            });
-        </script>
-    </button>
-</div>
-    <div class="container-fluid ">
-        <div class="pull-left">
-            <div class="pull-left">
-                <div class="collapse in active" id="side">
+    <div class="main Content">
+        <div style=" padding-right:20px; height:100vh;" class="pull-left">
+            <div style=" height:100vh;" class="pull-left collapse width in active" id="side">
+                <div class="SideBarContent collapse width in active" id="side">
                     <ul class="nav nav-pills nav-stacked ">
-                        <li class="active"><a data-toggle="pill" href="#home">fgrgr</a></li>
-                        <li class="nav-justified"><a data-toggle="pill" href="#test">Technical</a></li>
-                        <li><a data-toggle="pill" href="#test">Academic</a></li>
-                        <li><a data-toggle="pill" href="#test">Athletic</a></li>
-                        <li><a data-toggle="pill" href="#test">Other</a></li>
+                        <li><a data-toggle="pill" href="#SecondYear">Second Year</a></li>
+                        <li><a data-toggle="pill" href="#thirdYear">Third Year</a></li>
+                        <li><a data-toggle="pill" href="#FourthYear">Fourth Year</a></li>
+                        <li><a data-toggle="pill" href="#AllnOne">AllnOne</a></li>
+                        <li><a data-toggle="pill" href="#others">Others</a></li>
                     </ul>
-                    </div>
+                </div>
             </div>
             <button type="button" id="clickBtn2" data-toggle="collapse" data-target="#side" class=" mybtnMargn btn pull-left">
                 <span class="glyphicon glyphicon-arrow-left"></span>
                 <script>
-                    $('#clickBtn2').click(function() {
+                    $('#clickBtn2').click(function () {
                         $(this).find('span').toggleClass('glyphicon-arrow-left').toggleClass('glyphicon-arrow-right');
                     });
                 </script>
@@ -114,34 +167,57 @@
 
         <div class=" tab-content">
             <div id="home" class="tab-pane fade in active">
-                <h1>Testing 123 testing. </h1>
+                <h1>Select a project from the Side Bar </h1>
             </div>
-            <div id="test" class="tab-pane fade">
-                <p>
-                    data-toggle="collapse"d data-toggle="collapse"data-toggle="collapse"data-toggle="collapse"data-toggle="collapse"data-toggle="collapse"data-toggle="collapse"
-                    data-toggle="collapse"data-toggle="collapse"data-toggle="collapse"data-toggle="collapse"data-toggle
-                    ="collapse"data-toggle="collapse"data-toggle="collapse"data-toggle="collapse"data-toggle="collapse"data-toggle=
-                    "collapse"data-toggle="collapse"data-toggle="collapse"data-toggle="collapse"data-toggle="collapse"data-toggle="collapse"
-                    data-toggle="collapse"data-toggle="collapse"data-toggle="collapse"data-toggle="collapse"data-toggle="collapse"data-toggle="collapse"data-toggle
-                    data-toggle="collapse"data-toggle="collapse"data-toggle="collapse"data-toggle="collapse"data-toggle="collapse"data-toggle="collapse"data-toggle
-                    data-toggle="collapse"d data-toggle="collapse"data-toggle="collapse"data-toggle="collapse"data-toggle="collapse"data-toggle="collapse"data-toggle="collapse"
-                    data-toggle="collapse"data-toggle="collapse"data-toggle="collapse"data-toggle="collapse"data-toggle
-                    ="collapse"data-toggle="collapse"data-toggle="collapse"data-toggle="collapse"data-toggle="collapse"data-toggle=
-                    "collapse"data-toggle="collapse"data-toggle="collapse"data-toggle="collapse"data-toggle="collapse"data-toggle="collapse"
-                    data-toggle="collapse"data-toggle="collapse"data-toggle="collapse"data-toggle="collapse"data-toggle="collapse"data-toggle="collapse"data-toggle
-                    data-toggle="collapse"data-toggle="collapse"data-toggle="collapse"data-toggle="collapse"data-toggle="collapse"data-toggle="collapse"data-toggle
-                    data-toggle="collapse"d data-toggle="collapse"data-toggle="collapse"data-toggle="collapse"data-toggle="collapse"data-toggle="collapse"data-toggle="collapse"
-                    data-toggle="collapse"data-toggle="collapse"data-toggle="collapse"data-toggle="collapse"data-toggle
-                    ="collapse"data-toggle="collapse"data-toggle="collapse"data-toggle="collapse"data-toggle="collapse"data-toggle=
-                    "collapse"data-toggle="collapse"data-toggle="collapse"data-toggle="collapse"data-toggle="collapse"data-toggle="collapse"
-                    data-toggle="collapse"data-toggle="collapse"data-toggle="collapse"data-toggle="collapse"data-toggle="collapse"d
-                    data-toggle="collapse"data-toggle="collapse"data-toggle="collapse"data-toggle="collapse"data-toggle="collapse"data-toggle="collapse"data-toggle
-                    data-toggle="collapse"data-toggle="collapse"data-toggle="collapse"data-toggle="collapse"data-toggle="collapse"data-toggle="collapse"data-toggle
-
-                </p>
+            <div id="SecondYear" class="tab-pane fade">
+                <h1> This is Second Year Pane</h1>
+                This is Second Year Pane  This is Second Year Pane  This is Second Year Pane  This is Second Year Pane
+                This is Second Year Pane  This is Second Year Pane  This is Second Year Pane  This is Second Year Pane  This is Second Year Pane
+                This is Second Year Pane  This is Second Year Pane  This is Second Year Pane  This is Second Year Pane  This is Second Year Pane
+                This is Second Year Pane  This is Second Year Pane  This is Second Year Pane  This is Second Year Pane  This is Second Year Pane
+                This is Second Year Pane  This is Second Year Pane  This is Second Year Pane  This is Second Year Pane  This is Second Year Pane
+                This is Second Year Pane  This is Second Year Pane  This is Second Year Pane  This is Second Year Pane  This is Second Year Pane
+                This is Second Year Pane  This is Second Year Pane  This is Second Year Pane  This is Second Year Pane  This is Second Year Pane
+                This is Second Year Pane  This is Second Year Pane  This is Second Year Pane  This is Second Year Pane  This is Second Year Pane
+                This is Second Year Pane  This is Second Year Pane  This is Second Year Pane  This is Second Year Pane  This is Second Year Pane
+                This is Second Year Pane  This is Second Year Pane  This is Second Year Pane  This is Second Year Pane  This is Second Year Pane
+                This is Second Year Pane  This is Second Year Pane  This is Second Year Pane  This is Second Year Pane  This is Second Year Pane
+                This is Second Year Pane  This is Second Year Pane  This is Second Year Pane  This is Second Year Pane  This is Second Year Pane
+                This is Second Year Pane  This is Second Year Pane  This is Second Year Pane  This is Second Year Pane  This is Second Year Pane
+                This is Second Year Pane  This is Second Year Pane  This is Second Year Pane  This is Second Year Pane  This is Second Year Pane
+                This is Second Year Pane  This is Second Year Pane  This is Second Year Pane  This is Second Year Pane  This is Second Year Pane
+                This is Second Year Pane  This is Second Year Pane  This is Second Year Pane  This is Second Year Pane  This is Second Year Pane
+                This is Second Year Pane  This is Second Year Pane  This is Second Year Pane  This is Second Year Pane  This is Second Year Pane
+                This is Second Year Pane  This is Second Year Pane  This is Second Year Pane  This is Second Year Pane  This is Second Year Pane
+                This is Second Year Pane  This is Second Year Pane  This is Second Year Pane  This is Second Year Pane  This is Second Year Pane
+                This is Second Year Pane  This is Second Year Pane  This is Second Year Pane  This is Second Year Pane  This is Second Year Pane
+                This is Second Year Pane  This is Second Year Pane  This is Second Year Pane  This is Second Year Pane  This is Second Year Pane
+                This is Second Year Pane  This is Second Year Pane  This is Second Year Pane  This is Second Year Pane  This is Second Year Pane
+                This is Second Year Pane  This is Second Year Pane  This is Second Year Pane  This is Second Year Pane  This is Second Year Pane
+                This is Second Year Pane  This is Second Year Pane  This is Second Year Pane  This is Second Year Pane  This is Second Year Pane
+                This is Second Year Pane  This is Second Year Pane  This is Second Year Pane  This is Second Year Pane  This is Second Year Pane
+                This is Second Year Pane  This is Second Year Pane  This is Second Year Pane  This is Second Year Pane  This is Second Year Pane
+                This is Second Year Pane  This is Second Year Pane  This is Second Year Pane  This is Second Year Pane  This is Second Year Pane
+                This is Second Year Pane  This is Second Year Pane  This is Second Year Pane  This is Second Year Pane  This is Second Year Pane
+                This is Second Year Pane  This is Second Year Pane  This is Second Year Pane  This is Second Year Pane  This is Second Year Pane
+                This is Second Year Pane  This is Second Year Pane  This is Second Year Pane  This is Second Year Pane  This is Second Year Pane
+                This is Second Year Pane  This is Second Year Pane  This is Second Year Pane  This is Second Year Pane  This is Second Year Pane
+                This is Second Year Pane  This is Second Year Pane  This is Second Year Pane  This is Second Year Pane  This is Second Year Pane
+                This is Second Year Pane  This is Second Year Pane  This is Second Year Pane  This is Second Year Pane  This is Second Year Pane
+                This is Second Year Pane  This is Second Year Pane  This is Second Year Pane  This is Second Year Pane  This is Second Year Pane
+                This is Second Year Pane  This is Second Year Pane  This is Second Year Pane  This is Second Year Pane  This is Second Year Pane
+                This is Second Year Pane  This is Second Year Pane  This is Second Year Pane  This is Second Year Pane  This is Second Year Pane
+                This is Second Year Pane  This is Second Year Pane  This is Second Year Pane  This is Second Year Pane  This is Second Year Pane
+                This is Second Year Pane  This is Second Year Pane  This is Second Year Pane  This is Second Year Pane  This is Second Year Pane
+                This is Second Year Pane  This is Second Year Pane  This is Second Year Pane  This is Second Year Pane  This is Second Year Pane  This is Second Year Pane  This is Second Year Pane  This is Second Year Pane  This is Second Year Pane  This is Second Year Pane  This is Second Year Pane  This is Second Year Pane  This is Second Year Pane  This is Second Year Pane  This is Second Year Pane  This is Second Year Pane  This is Second Year Pane  This is Second Year Pane  This is Second Year Pane  This is Second Year Pane  This is Second Year Pane  This is Second Year Pane  This is Second Year Pane  This is Second Year Pane  This is Second Year Pane  This is Second Year Pane  This is Second Year Pane  This is Second Year Pane  This is Second Year Pane  This is Second Year Pane  This is Second Year Pane  This is Second Year Pane  This is Second Year Pane  This is Second Year Pane  This is Second Year Pane  This is Second Year Pane  This is Second Year Pane  This is Second Year Pane  This is Second Year Pane  This is Second Year Pane  This is Second Year Pane  This is Second Year Pane  This is Second Year Pane  This is Second Year Pane  This is Second Year Pane  This is Second Year Pane  This is Second Year Pane  This is Second Year Pane  This is Second Year Pane  This is Second Year Pane  This is Second Year Pane  This is Second Year Pane  This is Second Year Pane  This is Second Year Pane  This is Second Year Pane  This is Second Year Pane  This is Second Year Pane  This is Second Year Pane  This is Second Year Pane  This is Second Year Pane  This is Second Year Pane  This is Second Year Pane  This is Second Year Pane  This is Second Year Pane  This is Second Year Pane  This is Second Year Pane  This is Second Year Pane  This is Second Year Pane  This is Second Year Pane  This is Second Year Pane  This is Second Year Pane  This is Second Year Pane  This is Second Year Pane  This is Second Year Pane  This is Second Year Pane  This is Second Year Pane  This is Second Year Pane  This is Second Year Pane  This is Second Year Pane  This is Second Year Pane  This is Second Year Pane  This is Second Year Pane
+                This is Second Year Pane  This is Second Year Pane  This is Second Year Pane  This is Second Year Pane  This is Second Year Pane  T
+                his is Second Year Pane  This is Second Year Pane
             </div>
+            <div id="thirdYear" class="tab-pane fade"> This is third Year Pane</div>
+            <div id="FourthYear" class="tab-pane fade"> This is Fourth Year Pane</div>
+            <div id="AllnOne" class="tab-pane fade"> This is the AllnOne Project Pane</div>
+            <div id="others" class="tab-pane fade">This Consists of My Other Programming work</div>
         </div>
     </div>
-
 </body>
 </html>
