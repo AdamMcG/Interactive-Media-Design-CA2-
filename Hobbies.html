@@ -37,6 +37,7 @@
 
         .mybtnMargn {
             margin-right: 20px;
+            margin-bottom: 100vh;
             height: 30vh;
         }
     </style>
@@ -53,8 +54,9 @@
             <li role="presentation"><a> Search <span class="glyphicon glyphicon-search"></span></a></li>
         </ul>
     </nav>
-    <div id="demo">
-        <div class="container-fluid jumbotron collapse in active">
+<div id="Top Hero Content">
+    <div id="demo" class="container-fluid collapse in active">
+        <div class="jumbotron">
             <div class="row">
                 <div class="col-xs-6 col-md-3">
                     <a href="#" class="thumbnail">
@@ -71,28 +73,34 @@
                 </div>
             </div>
         </div>
-
-
-
     </div>
     <button type="button" id="clickBtn" data-toggle="collapse" data-target="#demo" class="collapsJumbo btn btn-group-justified">
         <span class="glyphicon glyphicon-arrow-down"></span>
         <script>
-        $('#clickBtn').click(function() {
-            $(this).find('span').toggleClass('glyphicon-arrow-up').toggleClass('glyphicon-arrow-down');
-        });
+            $('#clickBtn').click(function() {
+                $(this).find('span').toggleClass('glyphicon-arrow-up').toggleClass('glyphicon-arrow-down');
+            });
+            $('.collapse').click(function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+
+                return false;
+            });
         </script>
     </button>
+</div>
     <div class="container-fluid ">
         <div class="pull-left">
             <div class="pull-left">
-                <ul class="nav nav-pills nav-stacked collapse in active" id="side">
-                    <li class="active"><a data-toggle="pill" href="#home">fgrgr</a></li>
-                    <li class="nav-justified"><a data-toggle="pill" href="#test">Technical</a></li>
-                    <li><a data-toggle="pill" href="#test">Academic</a></li>
-                    <li><a data-toggle="pill" href="#test">Athletic</a></li>
-                    <li><a data-toggle="pill" href="#test">Other</a></li>
-                </ul>
+                <div class="collapse in active" id="side">
+                    <ul class="nav nav-pills nav-stacked ">
+                        <li class="active"><a data-toggle="pill" href="#home">fgrgr</a></li>
+                        <li class="nav-justified"><a data-toggle="pill" href="#test">Technical</a></li>
+                        <li><a data-toggle="pill" href="#test">Academic</a></li>
+                        <li><a data-toggle="pill" href="#test">Athletic</a></li>
+                        <li><a data-toggle="pill" href="#test">Other</a></li>
+                    </ul>
+                    </div>
             </div>
             <button type="button" id="clickBtn2" data-toggle="collapse" data-target="#side" class=" mybtnMargn btn pull-left">
                 <span class="glyphicon glyphicon-arrow-left"></span>
@@ -108,7 +116,7 @@
             <div id="home" class="tab-pane fade in active">
                 <h1>Testing 123 testing. </h1>
             </div>
-            <div id="test" class="tab-pane fade in active">
+            <div id="test" class="tab-pane fade">
                 <p>
                     data-toggle="collapse"d data-toggle="collapse"data-toggle="collapse"data-toggle="collapse"data-toggle="collapse"data-toggle="collapse"data-toggle="collapse"
                     data-toggle="collapse"data-toggle="collapse"data-toggle="collapse"data-toggle="collapse"data-toggle
@@ -120,6 +128,13 @@
                     data-toggle="collapse"data-toggle="collapse"data-toggle="collapse"data-toggle="collapse"data-toggle
                     ="collapse"data-toggle="collapse"data-toggle="collapse"data-toggle="collapse"data-toggle="collapse"data-toggle=
                     "collapse"data-toggle="collapse"data-toggle="collapse"data-toggle="collapse"data-toggle="collapse"data-toggle="collapse"
+                    data-toggle="collapse"data-toggle="collapse"data-toggle="collapse"data-toggle="collapse"data-toggle="collapse"data-toggle="collapse"data-toggle
+                    data-toggle="collapse"data-toggle="collapse"data-toggle="collapse"data-toggle="collapse"data-toggle="collapse"data-toggle="collapse"data-toggle
+                    data-toggle="collapse"d data-toggle="collapse"data-toggle="collapse"data-toggle="collapse"data-toggle="collapse"data-toggle="collapse"data-toggle="collapse"
+                    data-toggle="collapse"data-toggle="collapse"data-toggle="collapse"data-toggle="collapse"data-toggle
+                    ="collapse"data-toggle="collapse"data-toggle="collapse"data-toggle="collapse"data-toggle="collapse"data-toggle=
+                    "collapse"data-toggle="collapse"data-toggle="collapse"data-toggle="collapse"data-toggle="collapse"data-toggle="collapse"
+                    data-toggle="collapse"data-toggle="collapse"data-toggle="collapse"data-toggle="collapse"data-toggle="collapse"d
                     data-toggle="collapse"data-toggle="collapse"data-toggle="collapse"data-toggle="collapse"data-toggle="collapse"data-toggle="collapse"data-toggle
                     data-toggle="collapse"data-toggle="collapse"data-toggle="collapse"data-toggle="collapse"data-toggle="collapse"data-toggle="collapse"data-toggle
 
