@@ -89,6 +89,7 @@
                     <li><a class="navbar-brand" data-toggle="pill" href="#tab3">Hobbies</a></li>
                     <li><a class="navbar-brand" data-toggle="pill" href="#tab4">Experience</a></li>
                     <li><a class="navbar-brand" href="#myModal" data-toggle="modal">Contact Me</a></li>
+                    <li><a class="navbar-brand" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample">Search</a></li>
                 </ul>
             </div>
         </div>
@@ -172,7 +173,29 @@
 
     <div class="container" style=" background-color: white; padding-left:0; padding-right:0;">
         <div class="tab-content">
-            <div id="Tab1" class="tab-pane fade in active">
+
+            <div id="tab0" class="tab-pane fade in active">
+                <div class="myContent">
+                    <nav class="navbar navbar-default">
+                        <div class="container-fluid">
+                            <div class="navbar-header">
+                                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar2">
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                </button>
+                                <a class="navbar-brand"> About Me</a>
+                            </div>
+                            <div class="collapse navbar">
+                            </div>
+                        </div>
+                    </nav>
+                    <p>I'm a Fourth year Computing student seeking future employment.</p>
+                </div>
+            </div>
+
+
+            <div id="Tab1" class="tab-pane fade">
                 <div class="main Content ">
                     <nav class="navbar navbar-default">
                         <div class="container-fluid">
@@ -196,8 +219,8 @@
                     </nav>
                     <div class="tab-content" style="padding-bottom:50px;">
                         <div id="home" class="tab-pane fade in active">
-                            <h1>Project Pane</h1>
-
+                            <h2></h2>
+                            <p>This section contains information and briefs regarding the projects I've completed inside and outside of College.</p>
                         </div>
                         <div id="FirstYear" class="tab-pane fade">
                             <h1>Employee Management System.</h1>
@@ -445,7 +468,7 @@
             <div id="tab2" class="tab-pane fade">
 
                 <div class="main Content">
-                    <nav class="navbar navbar-">
+                    <nav class="navbar navbar-default">
                         <div class="container-fluid">
                             <div class="navbar-header">
                                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar3">
@@ -466,7 +489,11 @@
                         </div>
                     </nav>
                     <div class=" tab-content">
-                        <div id="semester1" class="tab-pane fade in active">
+                        <div id="home" class="tab-pane fade in active">
+                            <h2></h2>
+                            <p>This section contains the modules I have studied, how many semesters I have completed and my grades regarding said modules</p>
+                        </div>
+                        <div id="semester1" class="tab-pane fade">
                             <div class="panel-group" id="accordion">
                                 <div class="panel panel-info">
                                     <div class="panel-heading">
@@ -696,6 +723,10 @@
                         </div>
                     </nav>
                     <div class=" tab-content">
+                        <div id="home" class="tab-pane fade in active">
+                            <h2></h2>
+                            <p>This section contains information and briefs regarding my hobbies and interests in and outside of Technology.</p>
+                        </div>
                         <div id="Technical" class="tab-pane fade">
                             <ul>
                                 <li>Mobile Design and Development- C#, Android and iOS(Objective C)</li>
@@ -777,9 +808,9 @@
                         </div>
                     </nav>
                     <div class=" tab-content">
-                        <div id="semester1" class="tab-pane fade in active">
-                            <h1>Semester 1</h1>
-
+                        <div id="home" class="tab-pane fade in active">
+                            <h2></h2>
+                            <p>This section contains information and briefs regarding the Experience in work I have had- both in and outside of the Technology Industry.</p>
                         </div>
                         <div id="Retail" class="tab-pane fade">
                             <h2>
@@ -816,21 +847,31 @@
                             <p>
                                 My main concern in AllnOne was the facilitation of the development of a mobile companion application to the central BXP app. As I had no access to any
                                 cross-platform frameworks such as Xamarin, I proceeded to develop three different, platform specific iterations of this app- targetting the three platforms with the height market share:
-                            
-                            <ul>
-                                <li>Windows Phone 8.1</li>
-                                <li>Android</li>
-                                <li>iOS</li>
-                            </ul>
 
-                            As such, I was able to experience development in Android-Java, C# and Objective-C, along with gaining knowledge of operating OSX systems.</p>
-  
+                                <ul>
+                                    <li>Windows Phone 8.1</li>
+                                    <li>Android</li>
+                                    <li>iOS</li>
+                                </ul>
+
+                                As such, I was able to experience development in Android-Java, C# and Objective-C, along with gaining knowledge of operating OSX systems.
+                            </p>
+
                             <p>More information regarding AllnOne and BXP can be found <a target="_blank" href="http://www.bxpsoftware.com/">here</a> </p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
+
+
+    <div id="collapseExample" class="footer navbar-inverse navbar-fixed-bottom fade">
+        <form class=" navbar-form " role="search">
+            <input style="width:280px" type="text" class="form-control" placeholder="Search">
+            <button type="button" class="btn btn-default">Search</button>
+
+        </form>
     </div>
 </body>
 </html>
