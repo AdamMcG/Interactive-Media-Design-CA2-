@@ -3,7 +3,7 @@
 <head>
     <title>Adam McGivern's Home</title>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" />
     <link rel="stylesheet" href="Content/bootstrap-social.css" />
@@ -24,7 +24,7 @@
         }
 
         .btn-social-icon {
-            padding-right: 65px;
+            padding-right: 50px;
         }
 
         body {
@@ -68,24 +68,27 @@
     </style>
 </head>
 <body>
-    <div class="container">
-        <nav class="">
-            <ul class="navbar navbar-inverse navbar-fixed-top  nav nav-pills nav-justified">
-                <content> <a class="navbar-brand" style="padding-right: 850px;" href="Home.html">Adam McGivern</a></content>
-                <content><a class="navbar-brand " data-toggle="pill" href="#Tab1"> Project</a></content>
-                <content><a class="navbar-brand " data-toggle="pill" href="#tab2">Education</a></content>
-                <content><a class="navbar-brand " href="Hobbies.html">Hobbies</a></content>
-                <content><a class="navbar-brand " href="Experience.html">Experience</a></content>
-                <content><a class="navbar-brand " href="#myModal" data-toggle="modal">Contact Me</a></content>
-                <content class="pull-right">
-                    <form class=" navbar-form " role="search">
-                        <input style="width:200px" type="text" class="form-control" placeholder="Search">
-                        <button type="button" class="btn btn-default">Search</button>
-                    </form>
-                </content>
-            </ul>
-        </nav>
-    </div>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="Home.html">Adam McGivern</a>
+            </div>
+            <div class="collapse navbar-collapse nav-justified" id="myNavbar">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a class="navbar-brand" data-toggle="pill" href="#Tab1"> Project</a></li>
+                    <li><a class="navbar-brand" data-toggle="pill" href="#tab2">Education</a></li>
+                    <li><a class="navbar-brand" href="#">Hobbies</a></li>
+                    <li><a class="navbar-brand" href="#">Experience</a></li>
+                    <li><a class="navbar-brand " href="#myModal" data-toggle="modal">Contact Me</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
     <div id="myModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content ">
@@ -96,26 +99,26 @@
                 <div class="modal-body">
                     <form class="form-horizontal">
                         <div class="form-group">
-                            <label class="col-sm-1 control-label">Name</label>
-                            <div class="col-sm-12">
+                            <label class="col-xs-1 control-label">Name</label>
+                            <div class="col-xs-12">
                                 <input class="form-control" placeholder="Your name" data-placement="top" data-trigger="manual" data-content="Must be at least 3 characters long, and must only contain letters." type="text">
                             </div>
                         </div>
                         <div class="form-group">
-                            <label class="col-sm-1 control-label">Message</label>
-                            <div class="col-sm-12">
+                            <label class="col-xs-1 control-label">Message</label>
+                            <div class="col-xs-12">
                                 <textarea class="form-control" placeholder="Your message here.." data-placement="top" data-trigger="manual"></textarea>
                             </div>
                         </div>
                         <div class="form-group">
-                            <label class="col-sm-1 control-label">Email</label>
-                            <div class="col-sm-12">
+                            <label class="col-xs-1 control-label">Email</label>
+                            <div class="col-xs-12">
                                 <input class="form-control email" placeholder="email@you.com" data-placement="top" data-trigger="manual" data-content="Must be a valid e-mail address (user@gmail.com)" type="text">
                             </div>
                         </div>
                         <div class="form-group">
-                            <label class="col-sm-1 control-label">Phone</label>
-                            <div class="col-sm-12">
+                            <label class="col-xs-1 control-label">Phone</label>
+                            <div class="col-xs-12">
                                 <input class="form-control phone" placeholder="999-999-9999" data-placement="top" data-trigger="manual" data-content="Must be a valid phone number (999-999-9999)" type="text">
                             </div>
                         </div>
@@ -134,54 +137,66 @@
 
 
 
-    <div id="Top Hero Content" style="background-image: url(Content/shore_of_the_fractal_sea_1920x1080.jpg);background-size: auto;">
+    <div id="Top Hero Content" style="background-image: url(Content/shore_of_the_fractal_sea_1920x1080.jpg);background-size: auto; background-repeat:no-repeat;">
         <div id="demo" class="collapse in active">
-            <div class="jumbotron container-fluid">
+            <div class="jumbotron container-fluid" style="padding-top:55px">
                 <div class="jumboInfo">
-                    <div class=" col-md-2">
-                        <a href="#" class="thumbnail">
-                            <img src="http://www.socialgiri.com/wp-content/uploads/2013/08/about-thumbnail-placeholder.png" alt="...">
+                    <div class="container col-sm-3 ">
+                        <a class="thumbnail">
+                            <img src="http://lorempixel.com/200/200/" />
                         </a>
                     </div>
-
-                    <h2 class="text-left">Adam McGivern</h2>
-                    <h2 class="text-left">
-                        Honours Bsc. Computing
-                    </h2>
-                    <h3>Fourth Year Student</h3>
-                    <div class="col-sm-12">
-                        <a class=" btn btn-social-icon btn-default" href="https://drive.google.com/open?id=1SFxIde-3umbG7qPhhHYscmT-meEGIaSsUuatdWaxruw"><span class="fa fa-file-text">CV</span></a>
-                        <a class="btn btn-social-icon btn-twitter" href="https://twitter.com/CleverC0">
-                            <span class="fa fa-twitter-square"></span>
-                        </a>
-                        <a class=" btn btn-social-icon btn-github" href="https://github.com/AdamMcGivern"><span class="fa fa-github-square"></span></a>
-                        <a class=" btn btn-social-icon btn-linkedin" href="https://ie.linkedin.com/in/adam-mcgivern-905b8a64"><span class="fa fa-linkedin-square"></span></a>
-
+                    <div class="container col-sm-8">
+                        <div class="col-xs-9">
+                            <content><h2>Adam McGivern</h2></content>
+                            <content><h3>Honours Bsc. Computing</h3></content>
+                        </div>
+                        <div class=" col-xs-12 ">
+                            <a class=" btn btn-social-icon btn-default" href="https://drive.google.com/open?id=1SFxIde-3umbG7qPhhHYscmT-meEGIaSsUuatdWaxruw"><span class="fa fa-file-text">CV</span></a>
+                            <a class=" btn btn-social-icon btn-twitter" href="https://twitter.com/CleverC0">
+                                <span class="fa fa-twitter-square"></span>
+                            </a>
+                            <a class=" btn btn-social-icon btn-github" href="https://github.com/AdamMcGivern"><span class="fa fa-github-square"></span></a>
+                            <a class=" btn btn-social-icon btn-linkedin" href="https://ie.linkedin.com/in/adam-mcgivern-905b8a64"><span class="fa fa-linkedin-square"></span></a>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <div class="container" style=" background-color: white; padding-left: 0px; padding-right: 0px;">
+
+    <div class="container" style=" background-color: white; padding-left:0; padding-right:0;">
         <div class="tab-content">
             <div id="Tab1" class="tab-pane fade in active">
                 <div class="main Content ">
-                    <div class="navbar-inverse">
-                        <ul class=" nav nav-tabs nav-justified">
-                            <li><a data-toggle="tab" href="#FirstYear">Second Year</a></li>
-                            <li><a data-toggle="tab" href="#thirdYear">Third Year</a></li>
-                            <li><a data-toggle="tab" href="#FourthYear">Fourth Year</a></li>
-                            <li><a data-toggle="tab" href="#AllnOne">AllnOne</a></li>
-                            <li><a data-toggle="tab" href="#others">Others</a></li>
-                        </ul>
-                    </div>
+                    <nav class="navbar navbar-default">
+                        <div class="container-fluid">
+                            <div class="navbar-header">
+                                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar2">
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                </button>
+                                <a class="navbar-brand"> Projects</a>
+                            </div>
+                            <div class="collapse navbar-collapse" id="myNavbar2">
+                                <ul class="nav navbar-nav navbar-right nav-pills">
+                                    <li><a data-toggle="tab" href="#FirstYear">Second Year</a></li>
+                                    <li><a data-toggle="tab" href="#thirdYear">Third Year</a></li>
+                                    <li><a data-toggle="tab" href="#FourthYear">Fourth Year</a></li>
+                                    <li><a data-toggle="tab" href="#AllnOne">AllnOne</a></li>
+                                    <li><a data-toggle="tab" href="#others">Others</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </nav>
                     <div class="tab-content">
                         <div id="home" class="tab-pane fade in active">
                             <h1>Project Pane</h1>
 
                         </div>
-                        <div id="FirstYear" class="tab-pane fade">
+                        <div id="FirstYear" class="tab-pane fade" style="padding-bottom:50px">
                             <h1>Second Year Project</h1>
 
                             <h1>Employee Management System.</h1>
@@ -208,36 +223,47 @@
                                 There are three different levels of User: Standard, Admin and Manager. Admin deals with the whole system management,
                                 Managers can build teams and review leave application.
                             </p>
-                            <div class=" col-sm-2">
-                                <a href="#" class="thumbnail">
-                                    <img src="http://www.socialgiri.com/wp-content/uploads/2013/08/about-thumbnail-placeholder.png" alt="...">
+
+                            <div id="myCarousel2" class="carousel slide" data-ride="carousel">
+                                <!-- Indicators -->
+                                <ol class="carousel-indicators">
+                                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                                    <li data-target="#myCarousel" data-slide-to="1"></li>
+                                    <li data-target="#myCarousel" data-slide-to="2"></li>
+                                    <li data-target="#myCarousel" data-slide-to="3"></li>
+                                </ol>
+
+                                <!-- Wrapper for slides -->
+                                <div class="carousel-inner" role="listbox" style="height:500px">
+                                    <div class="item active">
+                                        <img src="http://lorempixel.com/500/1000/" alt="Chania">
+                                    </div>
+
+                                    <div class="item">
+                                        <img src="http://lorempixel.com/500/1000/" alt="Chania">
+                                    </div>
+
+                                    <div class="item">
+                                        <img src="http://lorempixel.com/1500/1000/" alt="Flower">
+                                    </div>
+
+                                    <div class="item">
+                                        <img src="http://lorempixel.com/1500/1345/" alt="Flower">
+                                    </div>
+                                </div>
+
+                                <!-- Left and right controls -->
+                                <a class="left carousel-control" href="#myCarousel2" role="button" data-slide="prev">
+                                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                                    <span class="sr-only">Previous</span>
+                                </a>
+                                <a class="right carousel-control" href="#myCarousel2" role="button" data-slide="next">
+                                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                                    <span class="sr-only">Next</span>
                                 </a>
                             </div>
-                            <div class=" col-sm-2">
-                                <a href="#" class="thumbnail">
-                                    <img src="http://www.socialgiri.com/wp-content/uploads/2013/08/about-thumbnail-placeholder.png" alt="...">
-                                </a>
-                            </div>
-                            <div class=" col-sm-2">
-                                <a href="#" class="thumbnail">
-                                    <img src="http://www.socialgiri.com/wp-content/uploads/2013/08/about-thumbnail-placeholder.png" alt="...">
-                                </a>
-                            </div>
-                            <div class=" col-sm-2">
-                                <a href="#" class="thumbnail">
-                                    <img src="http://www.socialgiri.com/wp-content/uploads/2013/08/about-thumbnail-placeholder.png" alt="...">
-                                </a>
-                            </div>
-                            <div class=" col-sm-2">
-                                <a href="#" class="thumbnail">
-                                    <img src="http://www.socialgiri.com/wp-content/uploads/2013/08/about-thumbnail-placeholder.png" alt="...">
-                                </a>
-                            </div>
-                            <div class=" col-sm-2">
-                                <a href="#" class="thumbnail">
-                                    <img src="http://www.socialgiri.com/wp-content/uploads/2013/08/about-thumbnail-placeholder.png" alt="...">
-                                </a>
-                            </div>
+
+
                         </div>
                         <div id="thirdYear" class="tab-pane fade">
                             <h1>Third Year Project</h1>
@@ -273,36 +299,45 @@
                                 The app also featured a backup (via Azure) which allowed users to store their whole set of contacts to our cloud source, then re-download to that exact phone- we used the phone’s own ID to bind to the cloud aspect to avoid needing any sort of login.
                             </p>
 
-                            <div class=" col-sm-2">
-                                <a href="#" class="thumbnail">
-                                    <img src="http://www.socialgiri.com/wp-content/uploads/2013/08/about-thumbnail-placeholder.png" alt="...">
+                            <div id="myCarousel1" class="carousel slide" data-ride="carousel">
+                                <!-- Indicators -->
+                                <ol class="carousel-indicators">
+                                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                                    <li data-target="#myCarousel" data-slide-to="1"></li>
+                                    <li data-target="#myCarousel" data-slide-to="2"></li>
+                                    <li data-target="#myCarousel" data-slide-to="3"></li>
+                                </ol>
+
+                                <!-- Wrapper for slides -->
+                                <div class="carousel-inner" role="listbox" style="height:500px">
+                                    <div class="item active">
+                                        <img src="http://lorempixel.com/500/1000/" alt="Chania">
+                                    </div>
+
+                                    <div class="item">
+                                        <img src="http://lorempixel.com/500/1000/" alt="Chania">
+                                    </div>
+
+                                    <div class="item">
+                                        <img src="http://lorempixel.com/1500/1000/" alt="Flower">
+                                    </div>
+
+                                    <div class="item">
+                                        <img src="http://lorempixel.com/1500/1345/" alt="Flower">
+                                    </div>
+                                </div>
+
+                                <!-- Left and right controls -->
+                                <a class="left carousel-control" href="#myCarousel1" role="button" data-slide="prev">
+                                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                                    <span class="sr-only">Previous</span>
+                                </a>
+                                <a class="right carousel-control" href="#myCarousel1" role="button" data-slide="next">
+                                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                                    <span class="sr-only">Next</span>
                                 </a>
                             </div>
-                            <div class=" col-sm-2">
-                                <a href="#" class="thumbnail">
-                                    <img src="http://www.socialgiri.com/wp-content/uploads/2013/08/about-thumbnail-placeholder.png" alt="...">
-                                </a>
-                            </div>
-                            <div class=" col-sm-2">
-                                <a href="#" class="thumbnail">
-                                    <img src="http://www.socialgiri.com/wp-content/uploads/2013/08/about-thumbnail-placeholder.png" alt="...">
-                                </a>
-                            </div>
-                            <div class=" col-sm-2">
-                                <a href="#" class="thumbnail">
-                                    <img src="http://www.socialgiri.com/wp-content/uploads/2013/08/about-thumbnail-placeholder.png" alt="...">
-                                </a>
-                            </div>
-                            <div class=" col-sm-2">
-                                <a href="#" class="thumbnail">
-                                    <img src="http://www.socialgiri.com/wp-content/uploads/2013/08/about-thumbnail-placeholder.png" alt="...">
-                                </a>
-                            </div>
-                            <div class=" col-sm-2">
-                                <a href="#" class="thumbnail">
-                                    <img src="http://www.socialgiri.com/wp-content/uploads/2013/08/about-thumbnail-placeholder.png" alt="...">
-                                </a>
-                            </div>
+
                         </div>
                         <div id="FourthYear" class="tab-pane fade">
                             This is Fourth Year Pane
@@ -320,9 +355,130 @@
                             <h3>Explanation:</h3>
                             <h3>Functionality:</h3>
 
+                            <div id="myCarousel3" class="carousel slide" data-ride="carousel">
+                                <!-- Indicators -->
+                                <ol class="carousel-indicators">
+                                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                                    <li data-target="#myCarousel" data-slide-to="1"></li>
+                                    <li data-target="#myCarousel" data-slide-to="2"></li>
+                                    <li data-target="#myCarousel" data-slide-to="3"></li>
+                                </ol>
+
+                                <!-- Wrapper for slides -->
+                                <div class="carousel-inner" role="listbox" style="height:500px">
+                                    <div class="item active">
+                                        <img src="http://lorempixel.com/500/1000/" alt="Chania">
+                                    </div>
+
+                                    <div class="item">
+                                        <img src="http://lorempixel.com/500/1000/" alt="Chania">
+                                    </div>
+
+                                    <div class="item">
+                                        <img src="http://lorempixel.com/1500/1000/" alt="Flower">
+                                    </div>
+
+                                    <div class="item">
+                                        <img src="http://lorempixel.com/1500/1345/" alt="Flower">
+                                    </div>
+                                </div>
+
+                                <!-- Left and right controls -->
+                                <a class="left carousel-control" href="#myCarousel3" role="button" data-slide="prev">
+                                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                                    <span class="sr-only">Previous</span>
+                                </a>
+                                <a class="right carousel-control" href="#myCarousel3" role="button" data-slide="next">
+                                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                                    <span class="sr-only">Next</span>
+                                </a>
+                            </div>
+
                         </div>
-                        <div id="AllnOne" class="tab-pane fade"> This is the AllnOne Project Pane</div>
-                        <div id="others" class="tab-pane fade">This Consists of My Other Programming work</div>
+                        <div id="AllnOne" class="tab-pane fade">
+                            This is the AllnOne Project Pane
+                            <div id="myCarousel5" class="carousel slide" data-ride="carousel">
+                                <!-- Indicators -->
+                                <ol class="carousel-indicators">
+                                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                                    <li data-target="#myCarousel" data-slide-to="1"></li>
+                                    <li data-target="#myCarousel" data-slide-to="2"></li>
+                                    <li data-target="#myCarousel" data-slide-to="3"></li>
+                                </ol>
+
+                                <!-- Wrapper for slides -->
+                                <div class="carousel-inner" role="listbox" style="height:500px">
+                                    <div class="item active">
+                                        <img src="http://lorempixel.com/500/1000/" alt="Chania">
+                                    </div>
+
+                                    <div class="item">
+                                        <img src="http://lorempixel.com/500/1000/" alt="Chania">
+                                    </div>
+
+                                    <div class="item">
+                                        <img src="http://lorempixel.com/1500/1000/" alt="Flower">
+                                    </div>
+
+                                    <div class="item">
+                                        <img src="http://lorempixel.com/1500/1345/" alt="Flower">
+                                    </div>
+                                </div>
+
+                                <!-- Left and right controls -->
+                                <a class="left carousel-control" href="#myCarousel5" role="button" data-slide="prev">
+                                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                                    <span class="sr-only">Previous</span>
+                                </a>
+                                <a class="right carousel-control" href="#myCarousel5" role="button" data-slide="next">
+                                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                                    <span class="sr-only">Next</span>
+                                </a>
+                            </div>
+
+                        </div>
+                        <div id="others" class="tab-pane fade">
+                            This Consists of My Other Programming work
+                                 <div id="myCarousel4" class="carousel slide" data-ride="carousel">
+                                <!-- Indicators -->
+                                <ol class="carousel-indicators">
+                                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                                    <li data-target="#myCarousel" data-slide-to="1"></li>
+                                    <li data-target="#myCarousel" data-slide-to="2"></li>
+                                    <li data-target="#myCarousel" data-slide-to="3"></li>
+                                </ol>
+
+                                <!-- Wrapper for slides -->
+                                <div class="carousel-inner" role="listbox" style="height:500px">
+                                    <div class="item active">
+                                        <img src="http://lorempixel.com/500/1000/" alt="Chania" >
+                                    </div>
+
+                                    <div class="item">
+                                        <img src="http://lorempixel.com/500/1000/" alt="Chania">
+                                    </div>
+
+                                    <div class="item">
+                                        <img src="http://lorempixel.com/1500/1000/" alt="Flower">
+                                    </div>
+
+                                    <div class="item">
+                                        <img src="http://lorempixel.com/1500/1345/" alt="Flower">
+                                    </div>
+                                </div>
+
+                                <!-- Left and right controls -->
+                                <a class="left carousel-control" href="#myCarousel4" role="button" data-slide="prev">
+                                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                                    <span class="sr-only">Previous</span>
+                                </a>
+                                <a class="right carousel-control" href="#myCarousel4" role="button" data-slide="next">
+                                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                                    <span class="sr-only">Next</span>
+                                </a>
+                            </div>
+                           
+                        </div>
                     </div>
                 </div>
             </div>
@@ -332,60 +488,35 @@
             <div id="tab2" class="tab-pane fade">
 
                 <div class="main Content">
-                    <div class="navbar-inverse">
-                        <ul class=" nav nav-tabs nav-justified">
-                            <li><a data-toggle="tab" href="#semester1">Semester 1</a></li>
-                            <li><a data-toggle="tab" href="#semester2">Semester 2</a></li>
-                            <li><a data-toggle="tab" href="#semester3">Semester 3</a></li>
-                            <li><a data-toggle="tab" href="#semester4">Semester 4</a></li>
-                            <li><a data-toggle="tab" href="#semester5">semester 5</a></li>
-                        </ul>
-                    </div>
+                    <nav class="navbar navbar-default">
+                        <div class="container-fluid">
+                            <div class="navbar-header">
+                                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar3">
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                </button>
+                                <a class="navbar-brand"> Education</a>
+                            </div>
+                            <div class="collapse navbar-collapse" id="myNavbar3">
+                                <ul class="nav navbar-nav navbar-right">
+                                    <li><a data-toggle="tab" href="#semester1">Year 1</a></li>
+                                    <li><a data-toggle="tab" href="#semester2">Year 2</a></li>
+                                    <li><a data-toggle="tab" href="#semester3">Year 3</a></li>
+                                    <li><a data-toggle="tab" href="#semester4">Year 4</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </nav>
                     <div class=" tab-content">
                         <div id="semester1" class="tab-pane fade in active">
-                            <h1> This is Second Year Pane</h1>
-                            <p>
-                                This is Second Year Pane This is Second Year Pane This is Second Year Pane This is Second Year Pane
-                                This is Second Year Pane This is Second Year Pane This is Second Year Pane This is Second Year Pane This is Second Year Pane
-                                This is Second Year Pane This is Second Year Pane This is Second Year Pane This is Second Year Pane This is Second Year Pane
-                                This is Second Year Pane This is Second Year Pane This is Second Year Pane This is Second Year Pane This is Second Year Pane
-                                This is Second Year Pane This is Second Year Pane This is Second Year Pane This is Second Year Pane This is Second Year Pane
-                                This is Second Year Pane This is Second Year Pane This is Second Year Pane This is Second Year Pane This is Second Year Pane
-                                This is Second Year Pane This is Second Year Pane This is Second Year Pane This is Second Year Pane This is Second Year Pane
-                                This is Second Year Pane This is Second Year Pane This is Second Year Pane This is Second Year Pane This is Second Year Pane
-                            </p>
-                            <p>
-                                This is Second Year Pane This is Second Year Pane This is Second Year Pane This is Second Year Pane This is Second Year Pane
-                                This is Second Year Pane This is Second Year Pane This is Second Year Pane This is Second Year Pane This is Second Year Pane
-                                This is Second Year Pane This is Second Year Pane This is Second Year Pane This is Second Year Pane This is Second Year Pane
-                                This is Second Year Pane This is Second Year Pane This is Second Year Pane This is Second Year Pane This is Second Year Pane
-                                This is Second Year Pane This is Second Year Pane This is Second Year Pane This is Second Year Pane This is Second Year Pane
-                                This is Second Year Pane This is Second Year Pane This is Second Year Pane This is Second Year Pane This is Second Year Pane
-                                This is Second Year Pane This is Second Year Pane This is Second Year Pane This is Second Year Pane This is Second Year Pane
-                            </p>
-                            <p>
-                                This is Second Year Pane This is Second Year Pane This is Second Year Pane This is Second Year Pane This is Second Year Pane
-                                This is Second Year Pane This is Second Year Pane This is Second Year Pane This is Second Year Pane This is Second Year Pane
-                                This is Second Year Pane This is Second Year Pane This is Second Year Pane This is Second Year Pane This is Second Year Pane
-                                This is Second Year Pane This is Second Year Pane This is Second Year Pane This is Second Year Pane This is Second Year Pane
-                                This is Second Year Pane This is Second Year Pane
-                            </p>
-                            <p>
-                                This is Second Year Pane This is Second Year Pane This is Second Year Pane
-                                This is Second Year Pane This is Second Year Pane This is Second Year Pane This is Second Year Pane This is Second Year Pane
-                                This is Second Year Pane This is Second Year Pane This is Second Year Pane This is Second Year Pane This is Second Year Pane
-                                This is Second Year Pane This is Second Year Pane This is Second Year Pane This is Second Year Pane This is Second Year Pane
-                                This is Second Year Pane This is Second Year Pane This is Second Year Pane This is Second Year Pane This is Second Year Pane
-                                This is Second Year Pane This is Second Year Pane This is Second Year Pane This is Second Year Pane This is Second Year Pane
-                                This is Second Year Pane This is Second Year Pane
-                                This is Second Year Pane This is Second Year Pane This is Second Year Pane This is Second Year Pane This is Second Year Pane T
-                                his is Second Year Pane This is Second Year Pane
-                            </p>
+                            <h1>Semester 1</h1>
+
                         </div>
-                        <div id="semester2" class="tab-pane fade"> This is third Year Pane</div>
-                        <div id="semester3" class="tab-pane fade"> This is Fourth Year Pane</div>
-                        <div id="semester4" class="tab-pane fade"> This is the AllnOne Project Pane</div>
-                        <div id="semester5" class="tab-pane fade">This Consists of My Other Programming work</div>
+                        <div id="semester2" class="tab-pane fade">Semester 2</div>
+                        <div id="semester3" class="tab-pane fade">Semester 3</div>
+                        <div id="semester4" class="tab-pane fade">Semester 4</div>
+                        <div id="semester5" class="tab-pane fade">Semester 5</div>
                     </div>
                 </div>
             </div>
