@@ -65,6 +65,10 @@
         .SideBarContent {
             float: left;
         }
+
+        h2 {
+            color: cornflowerblue;
+        }
     </style>
 </head>
 <body>
@@ -82,9 +86,9 @@
                 <ul class="nav navbar-nav navbar-right">
                     <li><a class="navbar-brand" data-toggle="pill" href="#Tab1"> Project</a></li>
                     <li><a class="navbar-brand" data-toggle="pill" href="#tab2">Education</a></li>
-                    <li><a class="navbar-brand" href="#">Hobbies</a></li>
-                    <li><a class="navbar-brand" href="#">Experience</a></li>
-                    <li><a class="navbar-brand " href="#myModal" data-toggle="modal">Contact Me</a></li>
+                    <li><a class="navbar-brand" data-toggle="pill" href="#tab3">Hobbies</a></li>
+                    <li><a class="navbar-brand" data-toggle="pill" href="#tab4">Experience</a></li>
+                    <li><a class="navbar-brand" href="#myModal" data-toggle="modal">Contact Me</a></li>
                 </ul>
             </div>
         </div>
@@ -148,16 +152,16 @@
                     </div>
                     <div class="container col-sm-8">
                         <div class="col-xs-9">
-                            <content><h2>Adam McGivern</h2></content>
+                            <content><h1>Adam McGivern</h1></content>
                             <content><h3>Honours Bsc. Computing</h3></content>
                         </div>
                         <div class=" col-xs-12 ">
-                            <a class=" btn btn-social-icon btn-default" href="https://drive.google.com/open?id=1SFxIde-3umbG7qPhhHYscmT-meEGIaSsUuatdWaxruw"><span class="fa fa-file-text">CV</span></a>
-                            <a class=" btn btn-social-icon btn-twitter" href="https://twitter.com/CleverC0">
+                            <a class=" btn btn-social-icon btn-default" target="_blank" href="https://drive.google.com/open?id=1SFxIde-3umbG7qPhhHYscmT-meEGIaSsUuatdWaxruw"><span class="fa fa-file-text">CV</span></a>
+                            <a class=" btn btn-social-icon btn-twitter" target="_blank" href="https://twitter.com/CleverC0">
                                 <span class="fa fa-twitter-square"></span>
                             </a>
-                            <a class=" btn btn-social-icon btn-github" href="https://github.com/AdamMcGivern"><span class="fa fa-github-square"></span></a>
-                            <a class=" btn btn-social-icon btn-linkedin" href="https://ie.linkedin.com/in/adam-mcgivern-905b8a64"><span class="fa fa-linkedin-square"></span></a>
+                            <a class=" btn btn-social-icon btn-github" target="_blank" href="https://github.com/AdamMcGivern"><span class="fa fa-github-square"></span></a>
+                            <a class=" btn btn-social-icon btn-linkedin" target="_blank" href="https://ie.linkedin.com/in/adam-mcgivern-905b8a64"><span class="fa fa-linkedin-square"></span></a>
                         </div>
                     </div>
                 </div>
@@ -186,19 +190,16 @@
                                     <li><a data-toggle="tab" href="#thirdYear">Third Year</a></li>
                                     <li><a data-toggle="tab" href="#FourthYear">Fourth Year</a></li>
                                     <li><a data-toggle="tab" href="#AllnOne">AllnOne</a></li>
-                                    <li><a data-toggle="tab" href="#others">Others</a></li>
                                 </ul>
                             </div>
                         </div>
                     </nav>
-                    <div class="tab-content">
+                    <div class="tab-content" style="padding-bottom:50px;">
                         <div id="home" class="tab-pane fade in active">
                             <h1>Project Pane</h1>
 
                         </div>
-                        <div id="FirstYear" class="tab-pane fade" style="padding-bottom:50px">
-                            <h1>Second Year Project</h1>
-
+                        <div id="FirstYear" class="tab-pane fade">
                             <h1>Employee Management System.</h1>
                             <h2>Technology:</h2>
                             <ul>
@@ -266,7 +267,6 @@
 
                         </div>
                         <div id="thirdYear" class="tab-pane fade">
-                            <h1>Third Year Project</h1>
                             <h1>Contacto Contact Management System</h1>
                             <h2>Technology</h2>
 
@@ -340,10 +340,8 @@
 
                         </div>
                         <div id="FourthYear" class="tab-pane fade">
-                            This is Fourth Year Pane
-                            <h1>Forth Year Project</h1>
-                            <h2>Api Baseline Monitor(W/IBM)</h2>
-                            <h3>Technology:</h3>
+                            <h1>Api Baseline Monitor(W/IBM)</h1>
+                            <h2>Technology:</h2>
                             <ul>
                                 <li>
                                     Client: HTML/JSP
@@ -352,8 +350,8 @@
                                 <li> Backend: Hibernate, w/DB2</li>
 
                             </ul>
-                            <h3>Explanation:</h3>
-                            <h3>Functionality:</h3>
+                            <h2>Explanation:</h2>
+                            <h2>Functionality:</h2>
 
                             <div id="myCarousel3" class="carousel slide" data-ride="carousel">
                                 <!-- Indicators -->
@@ -437,48 +435,7 @@
                             </div>
 
                         </div>
-                        <div id="others" class="tab-pane fade">
-                            This Consists of My Other Programming work
-                                 <div id="myCarousel4" class="carousel slide" data-ride="carousel">
-                                <!-- Indicators -->
-                                <ol class="carousel-indicators">
-                                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-                                    <li data-target="#myCarousel" data-slide-to="1"></li>
-                                    <li data-target="#myCarousel" data-slide-to="2"></li>
-                                    <li data-target="#myCarousel" data-slide-to="3"></li>
-                                </ol>
 
-                                <!-- Wrapper for slides -->
-                                <div class="carousel-inner" role="listbox" style="height:500px">
-                                    <div class="item active">
-                                        <img src="http://lorempixel.com/500/1000/" alt="Chania" >
-                                    </div>
-
-                                    <div class="item">
-                                        <img src="http://lorempixel.com/500/1000/" alt="Chania">
-                                    </div>
-
-                                    <div class="item">
-                                        <img src="http://lorempixel.com/1500/1000/" alt="Flower">
-                                    </div>
-
-                                    <div class="item">
-                                        <img src="http://lorempixel.com/1500/1345/" alt="Flower">
-                                    </div>
-                                </div>
-
-                                <!-- Left and right controls -->
-                                <a class="left carousel-control" href="#myCarousel4" role="button" data-slide="prev">
-                                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-                                    <span class="sr-only">Previous</span>
-                                </a>
-                                <a class="right carousel-control" href="#myCarousel4" role="button" data-slide="next">
-                                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-                                    <span class="sr-only">Next</span>
-                                </a>
-                            </div>
-                           
-                        </div>
                     </div>
                 </div>
             </div>
@@ -488,7 +445,7 @@
             <div id="tab2" class="tab-pane fade">
 
                 <div class="main Content">
-                    <nav class="navbar navbar-default">
+                    <nav class="navbar navbar-">
                         <div class="container-fluid">
                             <div class="navbar-header">
                                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar3">
@@ -510,13 +467,366 @@
                     </nav>
                     <div class=" tab-content">
                         <div id="semester1" class="tab-pane fade in active">
+                            <div class="panel-group" id="accordion">
+                                <div class="panel panel-info">
+                                    <div class="panel-heading">
+                                        <h4 class="panel-title">
+                                            <a data-toggle="collapse" href="#collapseSemester1">Semester 1</a>
+                                        </h4>
+                                    </div>
+                                    <div id="collapseSemester1" class="panel-collapse collapse in">
+                                        <div class="panel-body">
+                                            <ul>
+                                                <p> Learning to Learn at 3rd Lvl	B</p>
+
+                                                <p> Discrete Mathematics 1	B+</p>
+
+
+                                                <p>Business & Information Sys	A</p>
+
+                                                <p>Fundamentals of Interface & Web	B+</p>
+
+                                                <p>Computer Architecture	A</p>
+
+                                                <p>Software Development1	A</p>
+
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="panel panel-info">
+                                    <div class="panel-heading">
+                                        <h4 class="panel-title">
+                                            <a data-toggle="collapse" href="#collapseSemester2">Semester 2</a>
+                                        </h4>
+                                    </div>
+                                    <div id="collapseSemester2" class="panel-collapse collapse">
+                                        <div class="panel-body">
+                                            <ul>
+                                                <p> Operating Syst Fundamentals	B</p>
+
+                                                <p> Database Fundamentals	B+</p>
+
+
+                                                <p> Statistics	C+</p>
+
+                                                <p> Social Media Communications	B</p>
+
+                                                <p> Object Oriented System Analy	B</p>
+
+                                                <p> Software Development 2	A</p>
+
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="semester2" class="tab-pane fade">
+
+                            <div class="panel-group" id="accordion">
+                                <div class="panel panel-info">
+                                    <div class="panel-heading">
+                                        <h4 class="panel-title">
+                                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseSemester3">Semester 3</a>
+                                        </h4>
+                                    </div>
+                                    <div id="collapseSemester3" class="panel-collapse collapse in">
+                                        <div class="panel-body">
+
+                                            <ul>
+                                                <p> Web Design and Development	B+</p>
+
+                                                <p>  Discrete Mathematics 2	B</p>
+
+                                                <p>Database Design & Programmin	B+</p>
+
+                                                <p> Networking 1	B</p>
+
+                                                <p>Software Qual Ass & Testing	A</p>
+
+                                                <p>Software Development 3	A</p>
+
+                                            </ul>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="panel panel-info">
+                                    <div class="panel-heading">
+                                        <h4 class="panel-title">
+                                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseSemester4">Semester 4</a>
+                                        </h4>
+                                    </div>
+                                    <div id="collapseSemester4" class="panel-collapse collapse">
+                                        <div class="panel-body">
+                                            <ul>
+                                                <p>Information Security	B</p>
+
+                                                <p> Object Oriented Analy & Desi	C</p>
+
+                                                <p>Management Science	B</p>
+
+                                                <p> Networking 2	A</p>
+
+                                                <p>Project	B+</p>
+
+                                                <p>Software Development 4	B+</p>
+
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div id="semester3" class="tab-pane fade">
+
+                            <div class="panel-group" id="accordion">
+                                <div class="panel panel-info">
+                                    <div class="panel-heading">
+                                        <h4 class="panel-title">
+                                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseSemester5">Semester 5</a>
+                                        </h4>
+                                    </div>
+                                    <div id="collapseSemester5" class="panel-collapse collapse in">
+                                        <div class="panel-body">
+                                            <ul>
+                                                <p> Advanced Databases	B+</p>
+
+                                                <p> Cloud servs and distrib comp	B-</p>
+
+                                                <p>Innovation & Entrepreneurshp	B</p>
+
+                                                <p>Operating Systems	C+</p>
+
+                                                <p>Web Design & Development 2	C+</p>
+
+                                                <p> Algorithms and Data Strs 1	B+</p>
+
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="panel panel-info">
+                                    <div class="panel-heading">
+                                        <h4 class="panel-title">
+                                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseSemester6">Semester 6</a>
+                                        </h4>
+                                    </div>
+                                    <div id="collapseSemester6" class="panel-collapse collapse">
+                                        <div class="panel-body">
+
+                                            <ul>
+                                                <p> Network Management	B+</p>
+
+                                                <p>Project	B+</p>
+
+                                                <p> Obj Orientd Anal and Desgn 2	A</p>
+
+                                                <p>Algorithms and Data Strs 2	B+</p>
+
+                                                <p>Logic and Problem Solving	B+</p>
+
+                                            </ul>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="semester4" class="tab-pane fade">
+
+                            <div class="panel-group" id="accordion">
+                                <div class="panel panel-info">
+                                    <div class="panel-heading">
+                                        <h4 class="panel-title">
+                                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseSemester7">Semester 7</a>
+                                        </h4>
+                                    </div>
+                                    <div id="collapseSemester7" class="panel-collapse collapse ">
+                                        <div class="panel-body">
+                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                                            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                                            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="panel panel-info">
+                                    <div class="panel-heading">
+                                        <h4 class="panel-title">
+                                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseSemester8">Semester 8</a>
+                                        </h4>
+                                    </div>
+                                    <div id="collapseSemester8" class="panel-collapse collapse">
+                                        <div class="panel-body">
+                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                                            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                                            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div id="tab3" class="tab-pane fade">
+                <div class="main Content">
+                    <nav class="navbar navbar-default">
+                        <div class="container-fluid">
+                            <div class="navbar-header">
+                                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbarHobbies">
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                </button>
+                                <a class="navbar-brand"> Hobbies</a>
+                            </div>
+                            <div class="collapse navbar-collapse" id="myNavbarHobbies">
+                                <ul class="nav navbar-nav navbar-right">
+                                    <li><a data-toggle="tab" href="#Technical">Technical</a></li>
+                                    <li><a data-toggle="tab" href="#Academic">Academic</a></li>
+                                    <li><a data-toggle="tab" href="#Recreational">Recreational</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </nav>
+                    <div class=" tab-content">
+                        <div id="Technical" class="tab-pane fade">
+                            <ul>
+                                <li>Mobile Design and Development- C#, Android and iOS(Objective C)</li>
+                                <li>Game Design and Development(Beginner with Unity)</li>
+                                <li>Windows development(Microsoft Stack)</li>
+                                <li>Experienced with Hardware</li>
+                            </ul>
+
+                            <p>
+                                Development and computing goes beyond a simple study topic for me. I have a true love
+                                of technology and the processes, hardship and skill that goes into creating it. From
+                                Databases, to hardware to software- I want to learn as much as I can.
+                            </p>
+
+                            <p>
+                                Outside of what development skills or database admin I've learned, I've also
+                                become comfortable with hardware. I've taken apart many devices, and have built my own
+                                PC in my spare time.
+                            </p>
+
+                        </div>
+
+                        <div id="Academic" class="tab-pane fade">
+                            <ul>
+                                <li>20th Century History</li>
+                                <li>Economics (Microeconomics)</li>
+                                <li>Sociology</li>
+                            </ul>
+
+                            <p>
+                                I have many different academic interests, but history is my passion. If I wasn't a
+                                developer-in-training, I'd be studying History.
+                            </p>
+
+                            <p>
+                                I've recently become interested in the art of microeconomics. Supply and demand, elasticities,
+                                Consumer Demand- the topic has become intensely interesting to me and- when I do take time off- I'll actively
+                                study the topic.
+                            </p>
+
+                            <p>
+                                Sociology and the studying of our society at large is a very important topic and one that I find
+                                extremely interesting. This stems from the idea that
+                            </p>
+                        </div>
+                        <div id="Recreational" class="tab-pane fade">
+                            <ul>
+                                <li>Casual Gamer</li>
+                                <li>Hardcore Reader(Fiction and Nonfiction)</li>
+                                <li>Somewhat Knowledgable Soccer Fan</li>
+                            </ul>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div id="tab4" class="tab-pane fade">
+                <div class="main Content">
+                    <nav class="navbar navbar-default">
+                        <div class="container-fluid">
+                            <div class="navbar-header">
+                                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbarExperience">
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                </button>
+                                <a class="navbar-brand"> Experience</a>
+                            </div>
+                            <div class="collapse navbar-collapse" id="myNavbarExperience">
+                                <ul class="nav navbar-nav navbar-right">
+                                    <li><a data-toggle="tab" href="#Retail">Retail Experience</a></li>
+                                    <li><a data-toggle="tab" href="#Development">Development Experience</a></li>
+
+                                </ul>
+                            </div>
+                        </div>
+                    </nav>
+                    <div class=" tab-content">
+                        <div id="semester1" class="tab-pane fade in active">
                             <h1>Semester 1</h1>
 
                         </div>
-                        <div id="semester2" class="tab-pane fade">Semester 2</div>
-                        <div id="semester3" class="tab-pane fade">Semester 3</div>
-                        <div id="semester4" class="tab-pane fade">Semester 4</div>
-                        <div id="semester5" class="tab-pane fade">Semester 5</div>
+                        <div id="Retail" class="tab-pane fade">
+                            <h2>
+                                New Image Drycleaners:
+                            </h2>
+                            <ul>
+                                <li>Term: Summer 2009 - Present</li>
+                                <li>Title: Retail Assistant</li>
+                            </ul>
+
+                            <p>
+                                I've worked on and off in New Image all throughout my teenage years. New Image is smaller, sole-trader Drycleaners and laundrette, based in Kimmage dublin 12.
+                                Owned and opens for more than 40 years, New Image is quite well known to the local community in Walkinstown.
+                            </p>
+
+                            <p>
+                                As Retail Assistant seems to be a catch-all title, my duties varied across many different facets of the drycleaning business. From Ironing, to machine operation, to retail work and hygiene, I've worked
+                                a majority of the jobs in the store.
+                            </p>
+                        </div>
+                        <div id="Development" class="tab-pane fade">
+                            <h2>AllnOne LTD</h2>
+                            <ul>
+                                <li>Term: Summer 2015(June-September)</li>
+                                <li>Title: Mobile Development Intern</li>
+                            </ul>
+
+                            <p>
+                                AllnOne are a small to medium size, Software as a Service startup based in Ballymount, Dublin 12. They provide
+                                a multitude of services through their primary product, BXP. BXP is a Web-based Customer and Employee management system which- through its
+                                large array of modules consisting of Web Forms development to Gamification, can appeal to many businesses across a wide range of industries.
+                            </p>
+
+                            <p>
+                                My main concern in AllnOne was the facilitation of the development of a mobile companion application to the central BXP app. As I had no access to any
+                                cross-platform frameworks such as Xamarin, I proceeded to develop three different, platform specific iterations of this app- targetting the three platforms with the height market share:
+                            
+                            <ul>
+                                <li>Windows Phone 8.1</li>
+                                <li>Android</li>
+                                <li>iOS</li>
+                            </ul>
+
+                            As such, I was able to experience development in Android-Java, C# and Objective-C, along with gaining knowledge of operating OSX systems.</p>
+  
+                            <p>More information regarding AllnOne and BXP can be found <a target="_blank" href="http://www.bxpsoftware.com/">here</a> </p>
+                        </div>
                     </div>
                 </div>
             </div>
