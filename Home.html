@@ -4,8 +4,8 @@
     <title>Adam McGivern's Home</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.css">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.css" />
     <link rel="stylesheet" href="Content/bootstrap-social.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
@@ -89,8 +89,23 @@
                     <li><a class="navbar-brand" data-toggle="pill" href="#tab3">Hobbies</a></li>
                     <li><a class="navbar-brand" data-toggle="pill" href="#tab4">Experience</a></li>
                     <li><a class="navbar-brand" href="#myModal" data-toggle="modal">Contact Me</a></li>
-                    <li><a class="navbar-brand" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample">Search</a></li>
-                    <li><a class="navbar-brand" style="color:yellow" target="_blank" href="Hobbies.html">Iteration History</a></li>
+                    <li>
+                        <a class="navbar-brand" href="#collapseExample" data-toggle="dropdown" aria-expanded="false" aria-controls="collapseExample"><span class="fa fa-search">Search</span></a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <form class=" navbar-form " role="search">
+                                    <input style="width:200px;" type="text" class="form-control col-xs-8" placeholder="Search">
+                                    <button type="button" class="btn btn-default col-xs-4">Search</button>
+
+                                </form>
+                            </li>
+
+                        </ul>
+                    </li>
+                    <li>
+                        <a class="navbar-brand" style="color:yellow" target="_blank" type="button" href="Hobbies.html">Iteration History</a>
+
+                    </li>
                 </ul>
             </div>
         </div>
@@ -172,11 +187,11 @@
     </div>
 
 
-    <div class="container" style=" background-color: white; padding-left:0; padding-right:0;">
+    <div class="container-fluid" style=" padding-left:20px; padding-right:20px;">
         <div class="tab-content">
 
             <div id="tab0" class="tab-pane fade in active">
-                <div class="myContent">
+                <div class="myContent" style="background-color:white">
                     <nav class="navbar navbar-default">
                         <div class="container-fluid">
                             <div class="navbar-header">
@@ -418,7 +433,28 @@
 
                         </div>
                         <div id="AllnOne" class="tab-pane fade">
-                            This is the AllnOne Project Pane
+                            <h1>BXP Companion App(W/AllnOne LTD)</h1>
+                            <h2>Technology:</h2>
+                            <ul>
+                                <li>
+                                    Client: Windows PHone Runtime(C#), Android, iOS(Objective C)
+                                </li>
+                                <li> Logic: C#, Android Java, Objective C</li>
+                                <li> Backend: RESTful deployment from BXP Server, XML</li>
+
+                            </ul>
+                            <h2>Explanation:</h2>
+                            <p>During the summer of 2015, I'd gotten myself an internship position in AllnOne. My assignment was to develop a mobile app companion to accompany AllnOne's key product, BXP.</p>
+                            <p>
+                                BXP is a software as a service, web hosted platform for Employee and Customer management software. The key aspect to this software is the modularity- developers can create new modules to offer customers.
+                                My companion app was built to mirror this to a degree- the idea is that the mobile app should facilitate smaller aspects to the system- making appointments, etc. while leaving the bigger aspect to the Web client.
+                            </p>
+                            <h2>Functionality:</h2>
+                            <p>The mobile app offers usage of the core BXP modules to clients. From reminders, to the hamster wallboard(this is a current status and monitoring wallboard for a company)- the idea is that this contains the smaller aspects.</p>
+                            <p>
+                                This app does not utilise a relational database built in-app. Rather, the app utilises a RESTful based backend. The key ingenuity to this is that the developers will not have to update the app client itself- a lot of the content is held on Server and- therefore
+                                will be easily updated from that server.
+                            </p>
                             <div id="myCarousel5" class="carousel slide" data-ride="carousel">
                                 <!-- Indicators -->
                                 <ol class="carousel-indicators">
@@ -864,15 +900,6 @@
                 </div>
             </div>
         </div>
-    </div>
-
-
-    <div id="collapseExample" class="footer navbar-inverse navbar-fixed-bottom fade">
-        <form class=" navbar-form " role="search">
-            <input style="width:280px;" type="text" class="form-control" placeholder="Search">
-            <button type="button" class="btn btn-default">Search</button>
-
-        </form>
     </div>
 </body>
 </html>
