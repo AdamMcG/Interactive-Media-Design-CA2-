@@ -34,6 +34,7 @@
             padding-bottom: 60px;
             height: 100%;
             background-color: hsla(0,0%,95%, 0.5);
+           
         }
 
         @media (max-width: 1000px) {
@@ -76,7 +77,7 @@
     </style>
 </head>
 <body>
-    <nav class="navbar navbar-inverse navbar-fixed-top">
+    <nav class="navbar navbar-fixed-top navbar-inverse">
         <div class="container-fluid">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
@@ -84,7 +85,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a style="color:azure" class="navbar-brand" href="Home.html">Adam McGivern</a>
+                <a class="navbar-brand" href="Home.html">Adam McGivern</a>
             </div>
             <div class="collapse navbar-collapse nav-justified" id="myNavbar">
                 <ul class="nav navbar-nav navbar-right">
@@ -162,7 +163,7 @@
 
 
 
-    <div id="Top Hero Content" style="background-image: url(Content/shore_of_the_fractal_sea_1920x1080.jpg);background-size: auto; background-repeat:no-repeat;">
+    <div id="Top Hero Content" style=" background-image: url(Content/shore_of_the_fractal_sea_1920x1080.jpg);background-repeat: no-repeat; padding-bottom:110px">
         <div id="demo" class="collapse in active">
             <div class="jumbotron container-fluid" style="padding-top:55px">
                 <div class="jumboInfo">
@@ -175,6 +176,8 @@
                         <div class="col-xs-9">
                             <content><h2 style="color:black;">Adam McGivern</h2></content>
                             <content><h3>Honours Bsc. Computing</h3></content>
+
+
                         </div>
                         <div class=" col-xs-12 ">
                             <a class=" btn btn-social-icon btn-default" target="_blank" href="https://drive.google.com/open?id=1SFxIde-3umbG7qPhhHYscmT-meEGIaSsUuatdWaxruw"><span class="fa fa-file-text">CV</span></a>
@@ -191,7 +194,7 @@
     </div>
 
 
-    <div class="container-fluid" style=" padding-left:20px; padding-right:20px;">
+    <div class="container-fluid" style="  padding-left:20px; padding-right:20px;">
         <div class="tab-content">
 
             <div id="tab0" class="tab-pane fade in active">
@@ -206,13 +209,24 @@
                                 </button>
                                 <a style="color:navy" class="navbar-brand"> About Me</a>
                             </div>
-                            <div class="collapse navbar">
-                            </div>
+
                         </div>
                     </nav>
                     <h2>Welcome!</h2>
+                    <blockquote style="font-size:small; font-style:italic">
+                        Start by doing what's necessary;
+                        then do what's possible;
+                        and suddenly you are doing the impossible.
+                        -Francis of Assisi
+                    </blockquote>
                     <p>I'm a Fourth year Computing student seeking future employment.I'm confident, and eager to make an impact on the Tech industry.</p>
-                    <p>If you would like to get in touch, you can fill out the contact form above and I'll get back to you. Otherwise, you can reach me at Twitter, Github or LinkedIn using the buttons above</p>
+                    <p>You can learn more about my projects, my experience, my grades and even my hobbies by clicking on the very top navigation bar! </p>
+                    <p>If you would like to get into contact with me, feel free to leave a message on my contact form, or contact me on various social media:</p>
+                    <p>Github, Twitter and LinkedIn can be accessed using the above buttons. You can also find my CV there.</p>
+                    <br />
+                    <br />
+                    <br />
+                    <h3 style="color:darkslateblue">Thank you! </h3>
                 </div>
             </div>
 
@@ -344,7 +358,7 @@
                                 The app also featured a backup (via Azure) which allowed users to store their whole set of contacts to our cloud source, then re-download to that exact phone- we used the phone’s own ID to bind to the cloud aspect to avoid needing any sort of login.
                             </p>
 
-                            <div id="myCarousel1" class="carousel slide center-block" style="height:500px; width:600px;" data-ride="carousel">
+                            <div id="myCarousel1" class="carousel slide center-block" style="height:500px; width:480px;" data-ride="carousel">
                                 <!-- Indicators -->
                                 <ol class="carousel-indicators">
                                     <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
@@ -356,19 +370,19 @@
                                 <!-- Wrapper for slides -->
                                 <div class="carousel-inner" role="listbox" style="height:500px">
                                     <div class="item active">
-                                        <img src="http://lorempixel.com/500/1000/" alt="Chania">
+                                        <img src="Content/wp_ss_20151119_0001.jpg" alt="Chania">
                                     </div>
 
                                     <div class="item">
-                                        <img src="http://lorempixel.com/500/1000/" alt="Chania">
+                                        <img src="Content/wp_ss_20151119_0003.jpg" alt="Chania">
                                     </div>
 
                                     <div class="item">
-                                        <img src="http://lorempixel.com/1500/1000/" alt="Flower">
+                                        <img src="Content/wp_ss_20151119_0005.jpg" alt="Flower">
                                     </div>
 
                                     <div class="item">
-                                        <img src="http://lorempixel.com/1500/1345/" alt="Flower">
+                                        <img src="Content/wp_ss_20151119_0006.jpg" alt="Flower">
                                     </div>
                                 </div>
 
@@ -396,34 +410,29 @@
 
                             </ul>
                             <h2>Explanation:</h2>
+                            <p>This project was developed and commissioned by IBM, and passed to me as a student of ITT. The primary goal of this project is to develop an app which allows developers and teams to take a network packet baseline and compare it against other network captures. Ideally, this app would highlight differences, when found, and display to the developer.</p>
                             <h2>Functionality:</h2>
-
+                            <p>
+                                The intended functionality will include allowing users to upload files as baselines, or capture baselines from a network. to easily persist these to a database- on their choice. It should also run a passive network capture on a specified URL and device, to watch for a period of time.
+                                In later builds, this tool should compare captures and- if they occur- highlight these inconsistencies and notify the developer of the problem.
+                            </p>
                             <div id="myCarousel3" class="carousel slide center-block" style="height:500px; width:600px;" data-ride="carousel">
                                 <!-- Indicators -->
                                 <ol class="carousel-indicators">
                                     <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
                                     <li data-target="#myCarousel" data-slide-to="1"></li>
-                                    <li data-target="#myCarousel" data-slide-to="2"></li>
-                                    <li data-target="#myCarousel" data-slide-to="3"></li>
                                 </ol>
 
                                 <!-- Wrapper for slides -->
-                                <div class="carousel-inner" role="listbox" style="height:500px">
-                                    <div class="item active">
-                                        <img src="http://lorempixel.com/500/1000/" alt="Chania">
+                                <div class="carousel-inner" role="listbox" style="height:416px; width:416px">
+                                    <div class="item active center-block" style="justify-content:center">
+                                        <img src="http://i.forbesimg.com/media/lists/companies/ibm_416x416.jpg" alt="Chania">
                                     </div>
 
-                                    <div class="item">
-                                        <img src="http://lorempixel.com/500/1000/" alt="Chania">
+                                    <div class="item  center-block" style="justify-content:center">
+                                        <img src="Content/Java_620X0.jpg" alt="Chania">
                                     </div>
-
-                                    <div class="item">
-                                        <img src="http://lorempixel.com/1500/1000/" alt="Flower">
-                                    </div>
-
-                                    <div class="item">
-                                        <img src="http://lorempixel.com/1500/1345/" alt="Flower">
-                                    </div>
+                                   
                                 </div>
 
                                 <!-- Left and right controls -->
@@ -471,21 +480,21 @@
                                 </ol>
 
                                 <!-- Wrapper for slides -->
-                                <div class="carousel-inner" role="listbox" style="height:500px">
+                                <div class="carousel-inner" role="listbox" style="height:500px; width:500px">
                                     <div class="item active">
-                                        <img src="http://lorempixel.com/500/1000/" alt="Chania">
+                                        <img src="http://www.bxpsoftware.com/wixi/images/5/50/BXP_Software_Logo.png" alt="Chania">
+                                    </div>
+                                   
+                                    <div class="item ">
+                                        <img src=" https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Apple_logo_black.svg/2000px-Apple_logo_black.svg.png" alt="Chania">
+                                    </div>
+                                    
+                                    <div class="item ">
+                                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Windows_logo_-_2012_derivative.svg/2000px-Windows_logo_-_2012_derivative.svg.png" alt="Chania">
                                     </div>
 
-                                    <div class="item">
-                                        <img src="http://lorempixel.com/500/1000/" alt="Chania">
-                                    </div>
-
-                                    <div class="item">
-                                        <img src="http://lorempixel.com/1500/1000/" alt="Flower">
-                                    </div>
-
-                                    <div class="item">
-                                        <img src="http://lorempixel.com/1500/1345/" alt="Flower">
+                                    <div class="item ">
+                                        <img src="http://www.android.com/media/android_vector.jpg" alt="Chania">
                                     </div>
                                 </div>
 
